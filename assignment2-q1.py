@@ -1,8 +1,9 @@
 import math
 
+op = input("Enter operation (+,-,*,/,tan,sin,cos,cot,factorial,radical) = ")
 a = int(input("Enter a = "))
 b = int(input("Enter b = "))
-op = input("Enter operation = ")
+
 
 if op == "+":
     result = a + b
@@ -23,10 +24,6 @@ if op == "/":
         result = a / b
 
 
-if op == "radical":
-    result = math.sqrt(a)
-
-
 if op == "sin":
     result = math.sin(a)
 
@@ -38,13 +35,19 @@ if op == "cos":
 if op == "tan":
     result = math.tan(a)
 
-
-if op == "factorial":
-    result = math.factorial(a)
-
-
 if op == "cot":
     result = math.cos(a)/math.sin(a)
+
+
+if op == "factorial":
+    if a>=0:
+        result = math.factorial(a)
+
+
+if op == "radical":
+    if a>=0:
+        result = math.sqrt(a)
+
 
 
 print(result)
